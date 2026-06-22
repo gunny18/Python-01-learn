@@ -24,6 +24,7 @@ a = [1, 2, 3]
 b = [1, 2, 3]
 print(id(a), id(b))
 
+# Referencing b to a. b is now an alias to a.
 a = b
 print(id(a), id(b))
 
