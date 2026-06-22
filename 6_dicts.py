@@ -6,3 +6,6 @@ print(student)
 
 courses = student.pop("courses")
 print(student, courses)
+
+del student["name"]
+print(student)
