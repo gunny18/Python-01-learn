@@ -1,0 +1,31 @@
+Problem
+- I have a raw csv file with details of contributors from patreon
+- A huge task for me to go through list and add new contributors names to my website
+- Can we automate this to directly get the html list of contributors ?
+- I need to ensure the contributors mentioned on my website are those who chose rewards
+
+Analysis of csv file
+- Delimiter - Comma
+- First line -> Headers
+- Has some description lines, not clean.
+- Line 4 -> Says below are list of patreons who opted for rewards
+- Data
+- Line 35 -> Data of people who just contributed, dont need any rewards
+- Data
+- This seems to be the format of the raw csv file
+- Need list of HTML LI tags with first name last name only
+
+Approach
+- 1
+    - We cannot pre clean csv file
+    - Else we will have to do it manually everytime before script runs
+    - Makes automation only semi automated
+- 2
+    - We can identify the patterns
+    - Position of headers
+    - Position of garbage/irrelevant lines
+    - Position of reward patreons line
+    - Data of reward patreons
+    - Identify when description of non reward patreons lines
+        - We cannot hard code this position just based on this raw data
+    - Proceed with Data of non reward patreons
