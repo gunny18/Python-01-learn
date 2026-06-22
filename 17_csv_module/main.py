@@ -1,5 +1,6 @@
 import csv
 
+# Prints header as well
 with open("random_names.csv", "r") as csv_file:
     csv_reader = csv.reader(csv_file)
     for line in csv_reader:
@@ -7,6 +8,7 @@ with open("random_names.csv", "r") as csv_file:
 
 print("===========================================================")
 
+# Prints without header. next(reader) moves cursor to next line
 with open("random_names.csv", "r") as csv_file:
     csv_reader = csv.reader(csv_file)
     next(csv_reader)
